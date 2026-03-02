@@ -1,0 +1,61 @@
+---
+title: Surface Code 入門
+date: 2026-02-15
+tags:
+  - quantum
+  - error-correction
+  - topology
+summary: トポロジカル量子符号の代表格、Surface Codeの基本的なアイデアをまとめました。
+---
+
+# Surface Code 入門
+
+量子誤り訂正の中でも特に実装が現実的とされる **Surface Code** について、直感的に理解できるよう説明します。
+
+## なぜ誤り訂正が必要か?
+
+量子ビットは非常に繊細で、環境との相互作用（デコヒーレンス）によって情報が壊れます。古典計算では単純な多数決が使えますが、量子力学の重ね合わせと複製禁止定理により、同じ手法は使えません。
+
+## Surface Code の概要
+
+Surface Code は2次元グリッド上に物理量子ビットを配置し、隣接ビット間のパリティ（スタビライザー）を測定することで誤りを検出・訂正します。
+
+```
+· — · — ·
+|   |   |
+· — · — ·
+|   |   |
+· — · — ·
+```
+
+- **データビット**: ノード上
+- **補助ビット**: エッジ/プラケットの中心
+
+## スタビライザー測定
+
+各プラケット（面）で $X$ スタビライザーを、各頂点で $Z$ スタビライザーを測定します:
+
+$$
+S_X = \prod_{i \in \text{plaquette}} X_i, \quad S_Z = \prod_{j \in \text{vertex}} Z_j
+$$
+
+測定結果が $-1$ になるとシンドロームが発生し、誤りの位置を推定できます。
+
+## デコーダ
+
+最小重みマッチング（MWPM）アルゴリズムが代表的なデコーダです。シンドローム上のグラフマッチング問題として定式化され、多項式時間で解けます。
+
+```python
+import networkx as nx
+
+def mwpm_decode(syndromes):
+    G = build_syndrome_graph(syndromes)
+    matching = nx.min_weight_matching(G)
+    return matching_to_correction(matching)
+```
+
+## しきい値
+
+物理エラー率が **約1%** を下回ると、コード距離を大きくするほど論理エラー率が指数的に減少します。これが Surface Code の強みです。
+
+次回は具体的なシミュレーション実装を紹介します。

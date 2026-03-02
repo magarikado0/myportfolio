@@ -1,0 +1,44 @@
+---
+title: Research
+description: 研究内容の紹介
+---
+
+# Research
+
+量子誤り訂正とトポロジカル量子計算の理論研究を行っています。
+
+## 研究テーマ
+
+### トポロジカル量子符号
+
+Surface CodeやColor Codeを中心に、論理演算のオーバーヘッド削減に向けた新しい符号構成を研究しています。
+
+```python
+# Surface Code シンドローム計算の例
+def syndrome_measurement(stabilizers, state):
+    syndromes = []
+    for s in stabilizers:
+        outcome = measure_pauli(s, state)
+        syndromes.append(outcome)
+    return syndromes
+```
+
+### 変分量子アルゴリズム
+
+NISQ時代のデバイス上で動作する変分アルゴリズム（VQE, QAOA）の収束性解析と、エラー緩和手法の理論的考察。
+
+### 量子通信路
+
+量子通信路の容量公式と、デコヒーレンスモデルの数学的定式化。
+
+## 発表・論文
+
+| 年 | タイトル | 会議/誌 |
+|---|---|---|
+| 2025 | Efficient Decoding Algorithms for Topological Codes | arXiv |
+| 2024 | Noise Resilience in Variational Quantum Circuits | PRA |
+
+## 共同研究者
+
+- Prof. A (XX University)
+- Dr. B (YY Lab)

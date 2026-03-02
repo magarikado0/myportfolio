@@ -1,0 +1,55 @@
+---
+title: VQE (変分量子固有値ソルバー) 概要
+date: 2026-01-20
+tags:
+  - quantum
+  - variational
+  - nisq
+summary: NISQ時代を代表するアルゴリズム、VQEの基本的な仕組みと実装例を紹介します。
+---
+
+# VQE (変分量子固有値ソルバー) 概要
+
+**Variational Quantum Eigensolver (VQE)** は、量子コンピュータと古典最適化を組み合わせてハミルトニアンの基底状態エネルギーを求めるアルゴリズムです。
+
+## アイデア
+
+変分原理によれば、任意の状態 $|\psi\rangle$ に対して:
+
+$$
+E_0 \leq \langle \psi(\theta) | H | \psi(\theta) \rangle
+$$
+
+この期待値を古典オプティマイザで最小化します。
+
+## 手順
+
+1. **アンサッツ回路** $U(\theta)|0\rangle = |\psi(\theta)\rangle$ を用意
+2. 量子コンピュータで期待値 $\langle H \rangle_\theta$ を測定
+3. 古典コンピュータでパラメータ $\theta$ を更新
+4. 収束するまで繰り返す
+
+```python
+from qiskit.circuit.library import EfficientSU2
+from qiskit.primitives import StatevectorEstimator
+from scipy.optimize import minimize
+
+def vqe(hamiltonian, num_qubits):
+    ansatz = EfficientSU2(num_qubits, reps=2)
+    estimator = StatevectorEstimator()
+
+    def cost(params):
+        job = estimator.run([(ansatz, hamiltonian, params)])
+        return job.result()[0].data.evs
+
+    result = minimize(cost, x0=[0.1]*ansatz.num_parameters, method='COBYLA')
+    return result.fun
+```
+
+## 課題とトレンド
+
+- **バレンプラトー問題**: パラメータ空間の勾配消失
+- **測定ノイズ**: 実機では多くのサンプリングが必要
+- **エラー緩和**: ZNE、PEC を利用してノイズを軽減
+
+VQEはNISQデバイスの標準的なベンチマークとなっており、量子化学計算から組合せ最適化まで幅広い応用が期待されます。
