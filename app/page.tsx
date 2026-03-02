@@ -16,13 +16,14 @@ export default function Home() {
           </p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h1 className="mb-4 text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-6xl">
-            Your Name
+          <h1 className="mb-1 text-5xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-6xl">
+            magarikado
           </h1>
+          <p className="mb-4 text-lg text-gray-500 dark:text-gray-400">影山稜真</p>
         </AnimateIn>
         <AnimateIn delay={0.18}>
           <p className="max-w-xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-            量子情報・量子誤り訂正の研究者。理論と実装の境界を探求しています。
+            量子情報に興味がある大学生。研究・実装・メモなどを公開していきます。よろしくお願いします！
           </p>
         </AnimateIn>
         <AnimateIn delay={0.25}>
