@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://yourdomain.com', // Replace with your site's URL
+  siteUrl: 'https://magarikado.net', // Replace with your site's URL
   generateRobotsTxt: true, // Generate robots.txt file
 };
