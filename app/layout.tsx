@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "Portfolio",
     template: "%s | Portfolio",
   },
-  description: "量子情報研究者のポートフォリオサイト",
+  description: "量子情報に興味がある大学生のポートフォリオサイト",
 };
 
 export default function RootLayout({
