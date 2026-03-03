@@ -11,22 +11,13 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-4">
           <Link
-            href="https://github.com"
+            href="https://github.com/magarikado0"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
             className="text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-gray-100"
           >
             <Github size={20} />
-          </Link>
-          <Link
-            href="https://x.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter / X"
-            className="text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-gray-100"
-          >
-            <Twitter size={20} />
           </Link>
         </div>
       </div>

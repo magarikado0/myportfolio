@@ -5,28 +5,27 @@ description: 制作物・プロジェクト紹介
 
 # Projects
 
-研究や個人開発で作ったプロジェクトを紹介します。
+研究や個人/グループ開発で作ったプロジェクトを紹介します。
 
-## qecc-sim
+## Artport
 
-**量子誤り訂正シミュレータ**
+**芸術をもっと身近にするアプリ**
 
 Surface CodeとColor Codeのシンドローム測定・デコーダをPythonで実装したシミュレータ。
 
-- **技術**: Python, NumPy, Graph theory
-- **リンク**: [GitHub](https://github.com)
-
-```python
-from qecc_sim import SurfaceCode, MinimumWeightDecoder
-
-code = SurfaceCode(distance=5)
-decoder = MinimumWeightDecoder(code)
-result = decoder.decode(syndrome=code.random_error(p=0.01))
-print(result.logical_error_rate)
-```
+- **技術**: React(Javascript), Tailwind CSS, Firebase, Cloudinary, Qwen API
+- **リンク**: [GitHub](https://github.com/magarikado0/artport), [アプリURL](https://artport.magarikado.net)
 
 ---
 
+## MerManager
+
+**メルカリ在庫管理アプリ**
+
+父がメルカリの在庫管理をスマホでしたいと言っていたので作りました。
+既存アプリはあったのですが、一部機能が有料だったりしたので、練習がてら作ってみました。
+
+- **技術**: React(TypeScript), Tailwind CSS, Firebase, Gemini API
 ## portfolio（このサイト）
 
 **個人ポートフォリオサイト**
@@ -37,12 +36,3 @@ Next.js + Contentlayer2 + Tailwind CSSで構築したこのサイト。MDXで全
 - **リンク**: [GitHub](https://github.com)
 
 ---
-
-## qcircuit-visualizer
-
-**量子回路ビジュアライザ**
-
-ブラウザ上でドラッグ&ドロップで量子回路を組み立て、状態ベクトルを可視化するWebアプリ。
-
-- **技術**: TypeScript, React, WebGL
-- **リンク**: [Live Demo](https://example.com)

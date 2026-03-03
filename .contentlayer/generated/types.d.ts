@@ -29,6 +29,7 @@ export type Post = {
   date: IsoDateTimeString
   tags?: string[] | undefined
   summary?: string | undefined
+  hidden: boolean
   /** MDX file body */
   body: MDX
   slug: string
