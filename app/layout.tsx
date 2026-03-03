@@ -25,6 +25,22 @@ export const metadata: Metadata = {
     template: "%s | Portfolio",
   },
   description: "量子情報に興味がある大学生のポートフォリオサイト",
+  openGraph: {
+    title: "Portfolio",
+    description: "量子情報に興味がある大学生のポートフォリオサイト",
+    images: [
+      {
+        url: "/image/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@example",
+  },
 };
 
 export default function RootLayout({
