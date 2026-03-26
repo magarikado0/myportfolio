@@ -2,6 +2,9 @@
 
 import { useMDXComponent } from 'next-contentlayer2/hooks'
 
+const isExternalHref = (href?: string) =>
+  typeof href === 'string' && /^(https?:)?\/\//.test(href)
+
 const components = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className="mb-4 mt-8 text-3xl font-bold tracking-tight" {...props} />
@@ -18,8 +21,8 @@ const components = {
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <a
       className="text-blue-600 underline underline-offset-4 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-      target={props.href?.startsWith('http') ? '_blank' : undefined}
-      rel={props.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+      target={isExternalHref(props.href) ? '_blank' : undefined}
+      rel={isExternalHref(props.href) ? 'noopener noreferrer' : undefined}
       {...props}
     />
   ),
