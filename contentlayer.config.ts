@@ -1,11 +1,13 @@
+
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import rehypePrettyCode from 'rehype-pretty-code'
 import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 
 export const Page = defineDocumentType(() => ({
   name: 'Page',
-  filePathPattern: 'pages/*.mdx',
+  filePathPattern: 'pages/*.{md,mdx}',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
@@ -15,7 +17,7 @@ export const Page = defineDocumentType(() => ({
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
-  filePathPattern: 'posts/*.mdx',
+  filePathPattern: 'posts/20*.{md,mdx}',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
@@ -27,7 +29,7 @@ export const Post = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ''),
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.(md|mdx)$/, ''),
     },
   },
 }))
@@ -36,7 +38,7 @@ export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Page, Post],
   mdx: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkGfm, remarkMath],
     rehypePlugins: [
       rehypeKatex,
       [

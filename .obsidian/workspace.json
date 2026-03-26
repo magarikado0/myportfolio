@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "a8a143159934dd7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e4feeae8069d9cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9e799acfc97c2f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/2026-03-26-gdgoc-japanhackathon-revision.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-03-26-gdgoc-japanhackathon-revision"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "460212ee7bf88356",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4d821ab03bf9789",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "559ab88bac55658c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "7be7721a4c3f9e5a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "0716ab5664ba3c4b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "ce63c1a5034629e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "94967a47e1031884",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06b5f509531ef3a1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/posts/2026-03-26-gdgoc-japanhackathon-revision.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2026-03-26-gdgoc-japanhackathon-revisionへのバックリンク"
+            }
+          },
+          {
+            "id": "055e6a2976b4600a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/posts/2026-03-26-gdgoc-japanhackathon-revision.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2026-03-26-gdgoc-japanhackathon-revisionからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "004fa18654d9a931",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "7703b5b818c780fb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          },
+          {
+            "id": "86548076a5fa0005",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/posts/2026-03-26-gdgoc-japanhackathon-revision.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2026-03-26-gdgoc-japanhackathon-revisionのアウトライン"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:新規ベースを作成": false
+    }
+  },
+  "active": "a9e799acfc97c2f8",
+  "lastOpenFiles": [
+    "artgarden.magarikado.net.md",
+    "content/posts/2026-03-26-gdgoc-japanhackathon-revision.md",
+    "templates/2026-03-26-gdgoc-japanhackathon-revision.md",
+    "templates/obsidian-post-template.md",
+    "content/posts/abs提案書.md",
+    "templates",
+    "content/posts/_template.md"
+  ]
+}

@@ -23,7 +23,7 @@ export function getAllTags(): string[] {
 /** ファイル名（拡張子なし）でページを取得する */
 export function getPageByName(name: string): Page | undefined {
   return allPages.find(
-    (p) => p._raw.sourceFileName.replace(/\.mdx$/, '') === name
+    (p) => p._raw.sourceFileName.replace(/\.(md|mdx)$/, '') === name
   )
 }
 
