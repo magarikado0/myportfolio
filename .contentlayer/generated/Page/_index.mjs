@@ -2,6 +2,5 @@
 
 import pages__aboutMdx from './pages__about.mdx.json' with { type: 'json' }
 import pages__projectsMdx from './pages__projects.mdx.json' with { type: 'json' }
-import pages__researchMdx from './pages__research.mdx.json' with { type: 'json' }
 
-export const allPages = [pages__aboutMdx, pages__projectsMdx, pages__researchMdx]
+export const allPages = [pages__aboutMdx, pages__projectsMdx]
