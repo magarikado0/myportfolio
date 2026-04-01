@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     default: "Portfolio",
     template: "%s | Portfolio",
   },
-  description: "量子情報に興味がある大学生のポートフォリオサイト",
+  description: " 光量子分野に興味がある大学生のポートフォリオサイト",
   openGraph: {
     title: "Portfolio",
-    description: "量子情報に興味がある大学生のポートフォリオサイト",
+    description: "光量子分野に興味がある大学生のポートフォリオサイト",
     images: [
       {
         url: "/image/og-image.jpg",

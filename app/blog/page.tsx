@@ -22,7 +22,7 @@ export default function BlogPage() {
           Blog
         </h1>
         <p className="mb-8 text-gray-500 dark:text-gray-400">
-          量子情報・研究メモ・実装など
+          光量子分野・研究メモ・実装など
         </p>
       </AnimateIn>
 

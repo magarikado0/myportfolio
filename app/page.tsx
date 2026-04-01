@@ -23,7 +23,7 @@ export default function Home() {
         </AnimateIn>
         <AnimateIn delay={0.18}>
           <p className="max-w-xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-            量子情報に興味がある大学生。研究・個人開発・メモなどを公開していきます。
+            光量子分野に興味がある大学生。研究・個人開発・メモなどを公開していきます。
           </p>
         </AnimateIn>
         <AnimateIn delay={0.25}>
